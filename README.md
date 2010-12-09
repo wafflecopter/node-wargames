@@ -10,6 +10,12 @@ Visualization of an IRC channel in a wargame theme.
 * [request](https://github.com/mikeal/node-utils/tree/master/request/) (npm install request)
 * [socket.io](https://github.com/learnboost/socket.io-node/) (npm install socket.io)
 * [node-irc](http://github.com/martynsmith/node-irc/) (npm install irc)
+* npm install connect
+* npm install connect-assetmanager
+* npm install connect-assetmanager-handlers
+* npm install express
+* npm install ejs
+
 
 ### Create your war
 Change the port on line 43 in server.js
