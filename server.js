@@ -68,9 +68,9 @@ app.listen(port, null);
 var Wargames = require(__dirname+'/lib/wargames');
 new Wargames(app, {
 	ircNetwork: 'irc.freenode.net'
-	, ircChannel: '#Node.js'
-	, ircBotNick: 'MrWarGames'
-	, ircUserName: 'MrWarGames'
-	, ircRealName: 'MrWarGames'
-	, cachePath: '/tmp/cache.json'
+	, ircChannel: '#sickbeard'
+	, ircBotNick: 'shrimpy'
+	, ircUserName: 'shrimpy'
+	, ircRealName: 'shrimpy'
+	, cachePath: '/tmp/wargames.cache.json'
 });
