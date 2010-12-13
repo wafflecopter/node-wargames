@@ -41,6 +41,8 @@ var assets = assetManager({
 });
 
 var port = 5656;
+var listenip = '127.0.0.1';
+
 var app = module.exports = express.createServer();
 
 app.configure(function() {
@@ -63,14 +65,27 @@ app.get(/.*/, function(req, res) {
 	res.render('layout');
 });
 
-app.listen(port, null);
+app.listen(port, listenip);
 
 var Wargames = require(__dirname+'/lib/wargames');
 new Wargames(app, {
 	ircNetwork: 'irc.freenode.net'
-	, ircChannel: '#sickbeard'
-	, ircBotNick: 'shrimpy'
-	, ircUserName: 'shrimpy'
-	, ircRealName: 'shrimpy'
+	, ircChannel: '#testingchannel9'
+	, ircBotNick: 'yourbot'
+	, ircUserName: 'yourbot'
+	, ircRealName: 'yourbot'
 	, cachePath: '/tmp/wargames.cache.json'
+	, ldbname: 'somedbname'
+	, ldbtable: 'somedbtable'
+	, ldbuser: 'someuser'
+	, ldbpass: 'somepass'
+	, rssList: [
+		{ name: 'github',
+		url: 'http://feeds.feedburner.com/RecentCommitsToSick-beardmaster?format=atom',
+		interval: 10*60*1000 },
+		{ name: 'twitter',
+		url: 'http://twitter.com/statuses/user_timeline/44425690.rss',
+		interval: 20*60*1000 } ]
+	, bitlyUser: 'somebitlyuser'
+	, bitlyKey: 'Z_yourapykey'
 });
